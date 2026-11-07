@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shad-api"
+version = "1.0.0"
+description = "Async, dependency-light Python client for Shad (web.shad.ir) — IranLMS API"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Esi" }]
+keywords = ["shad", "web.shad.ir", "iranlms", "messenger", "async", "client", "api"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Communications :: Chat",
+    "Typing :: Typed",
+]
+dependencies = [
+    "aiohttp>=3.9",
+    "cryptography>=42",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=0.23"]
+
+[project.urls]
+Source = "https://t.me/Homosapien_001"
+Telegram = "https://t.me/Homosapien_001"
+
+[tool.setuptools]
+packages = ["shad_api"]
+
+[tool.setuptools.package-data]
+shad_api = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

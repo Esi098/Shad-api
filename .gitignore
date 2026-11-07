@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# Tests / tooling
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Shad sessions & credentials — never commit these
+*.session
+*.json.session
+session*.json
+sessions/
+.env
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
